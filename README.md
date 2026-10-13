@@ -8,7 +8,10 @@ Monorepo de estudo para separar tokens visuais, componentes React e documentaç�
 
 O código exporta `Text`, `Heading`, `Box`, `Button`, `TextInput` e `Avatar`. O README anterior listava também TextArea, Checkbox e MultiStep como objetivos; eles não estão exportados na versão atual.
 
-## Arquitetura
+<details>
+<summary><strong>Organização e código</strong></summary>
+
+### Arquitetura
 
 | Pacote | Responsabilidade |
 | --- | --- |
@@ -20,7 +23,19 @@ O código exporta `Text`, `Heading`, `Box`, `Button`, `TextInput` e `Avatar`. O 
 
 A separação permite que documentação e componentes utilizem os mesmos tokens. A build dos pacotes usa tsup; o Turborepo coordena os comandos dos workspaces.
 
-## Executar
+### Por dentro do código
+
+- [Exportações do pacote React](packages/react/src/index.tsx).
+- [Contrato e estilo do botão](packages/react/components/Button.tsx).
+- [Tokens de cores](packages/tokens/src/colors.ts).
+- [Stories do botão](packages/docs/src/stories/Button.stories.tsx).
+
+</details>
+
+<details>
+<summary><strong>Executar e consultar</strong></summary>
+
+### Executar
 
 ```bash
 git clone https://github.com/Will-Ifes/design-system.git
@@ -35,16 +50,14 @@ O Storybook está configurado na porta 6006. Para gerar os pacotes e a documenta
 npm run build
 ```
 
-## Por dentro do código
+</details>
 
-- [Exportações do pacote React](packages/react/src/index.tsx).
-- [Contrato e estilo do botão](packages/react/components/Button.tsx).
-- [Tokens de cores](packages/tokens/src/colors.ts).
-- [Stories do botão](packages/docs/src/stories/Button.stories.tsx).
-
-## Escopo e evolução
+<details>
+<summary>Escopo e referências</summary>
 
 É uma base educacional, sem declaração de homologação ou publicação atual dos pacotes. O script de teste de `packages/docs` é um placeholder. Testes de interação, acessibilidade e revisão dos contratos são próximas melhorias.
+
+</details>
 
 ---
 
