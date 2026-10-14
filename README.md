@@ -1,8 +1,19 @@
+<p align="center">
+  <img src="./.github/readme-cover.svg" alt="Component Foundations: Tokens, componentes e documentação no mesmo monorepo." width="100%" />
+</p>
+
 # Design system · componentes React e tokens
 
 Monorepo de estudo para separar tokens visuais, componentes React e documentação em Storybook. Projeto associado ao aprendizado da trilha Ignite da Rocketseat; é independente do [Will Labs](https://github.com/Will-Ifes/will-labs).
 
 **React · TypeScript · Stitches · Radix · Storybook · Turborepo · tsup**
+
+## Explore o diferencial
+
+| Ponto de entrada | O que observar |
+| --- | --- |
+| [Contrato compartilhado](packages/react/src/index.tsx) | O pacote React define o conjunto de componentes exportados. |
+| [Componente documentado](packages/docs/src/stories/Button.stories.tsx) | As stories do botão permitem examinar variações da mesma interface. |
 
 ## Conteúdo implementado
 
